@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <input id="username" type="text" placeholder="Nhập Username..">
+<input id="pwd" type="text" placeholder="Nhập mật khẩu..">
+<button id="btn">Save</button> -->
+
+
+
+
+    <script>
+class Form {
+            constructor() {
+                // Tạo phần tử form
+                this.formElement = document.createElement('form');
+                this.formElement.className = 'form';
+
+                // Tạo trường nhập liệu username
+                this.usernameInput = document.createElement('input');
+                this.usernameInput.type = 'text';
+                this.usernameInput.name = 'username';
+                this.usernameInput.placeholder = 'Username';
+                this.usernameInput.className = 'input-field';
+                this.formElement.appendChild(this.usernameInput);
+
+                // Tạo trường nhập liệu password
+                this.passwordInput = document.createElement('input');
+                this.passwordInput.type = 'password';
+                this.passwordInput.name = 'password';
+                this.passwordInput.placeholder = 'Password';
+                this.passwordInput.className = 'input-field';
+                this.formElement.appendChild(this.passwordInput);
+
+                // Tạo nút submit
+                this.submitButton = document.createElement('button');
+                this.submitButton.type = 'submit';
+                this.submitButton.innerText = 'Submit';
+                this.submitButton.className = 'submit-button';
+                this.formElement.appendChild(this.submitButton);
+
+                // Lắng nghe sự kiện submit trên form
+                this.formElement.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Ngăn chặn submit form
+
+                    // Gọi phương thức xử lý form
+                    this.submitForm();
+                });
+            }
+
+            // Phương thức xử lý form
+            submitForm() {
+                let formData = new FormData(this.formElement);
+                console.log(`Username: ${formData.get('username')}`);
+                console.log(`Password: ${formData.get('password')}`);
+            }
+
+            // Phương thức hiển thị form lên trang web
+            render(container) {
+                container.appendChild(this.formElement);
+            }
+        }
+
+        // Tạo form
+        let form = new Form();
+
+        // Hiển thị form trên trang web
+        form.render(document.body);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // class User {
+    //     constructor (username, pwd) {
+    //         this.username = username
+    //         this.pwd = pwd 
+    //     }
+
+    //     speak () {
+    //         return `Xin chao ${this.username} đã vào hệ thống`
+    //     }
+    // }
+
+    //     document.getElementById("btn").addEventListener("click", () => {
+    //         let username = document.getElementById("username").value
+    //         let pwd = document.getElementById("pwd").value
+
+    //         let account = new User (username, pwd)
+
+    //         console.log(account.speak())
+    //     })
+
+
+
+
+    </script>
+</body>
+</html>
